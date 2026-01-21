@@ -1,0 +1,30 @@
+[project]
+name = "picalc-ip8725"
+version = "0.2.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.1",
+    "scipy",
+]
+
+[project.scripts]
+picalc-ip8725 = "picalc_ip8725:main"
+picalc = "picalc_ip8725.pi:main"
+[project.optional-dependencies]
+win = [
+    "pandas>=2.3.3",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
+docs = [
+    "sphinx>=9.1.0",
+]
